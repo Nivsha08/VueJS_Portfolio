@@ -1,0 +1,54 @@
+.about{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.about .container {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: 'Source Code Pro', sans-serif;
+}
+
+.about h1,
+.about h3 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.about p {
+  font-size: 1.1rem;
+}
+
+.about img {
+  width: 70%;
+  align-self: center;
+}
+
+.about .row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about ul.icons {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about ul.icons li a span {
+  transition: .2s 0s color ease-out;
+}
+
+ul.icons .fa-facebook-square:hover {color:#3b5998}
+ul.icons .fa-instagram:hover {color:#c32aa3}
+ul.icons .fa-github:hover {color:#6e5494}
+ul.icons .fa-envelope-open:hover {color:#db4437}

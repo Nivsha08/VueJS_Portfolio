@@ -1,0 +1,34 @@
+.container {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.portfolio {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 0 3rem 0;
+}
+
+.fadeIn-enter-active {
+  animation: fadeIn .3s;
+}
+
+.fadeIn-leave-active {
+  animation: fadeIn .3s reverse;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
