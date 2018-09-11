@@ -24,7 +24,7 @@
           <li>Video editing</li>
           <li>Musical artworks design</li>
         </ul>
-      <img src="../../images/about.png" alt="">
+      <img src="http://www.nivsha.com/v3/images/about.png" alt="">
     </div>
   </div>
 </template>

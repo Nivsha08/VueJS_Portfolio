@@ -32,7 +32,7 @@ export default {
       this.onStage = 3; //show loader
       setTimeout(function() {
         this.onStage = data;
-      }.bind(this), 1500);
+      }.bind(this), 2000);
     }.bind(this));
   },
   name: 'App'

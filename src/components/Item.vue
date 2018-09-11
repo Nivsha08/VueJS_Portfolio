@@ -2,8 +2,8 @@
   <div class="item">
     <div @click="openItem" class="overlay">
       <h2>{{ itemTitle }}</h2>
-      <p>{{ itemDescription }}</p>
-      <p class="like"><span @click="like($event, id)" class="fa-heart" :class="{far: !isLiked, fas: isLiked, red: isLiked}"></span> {{ likes }}</p>
+      <p class="description">{{ itemDescription }}</p>
+      <!--<p class="like"><span @click="like($event, id)" class="fa-heart" :class="{far: !isLiked, fas: isLiked, red: isLiked}"></span> {{ likes }}</p>-->
     </div>
     <img :src="source" :title="itemTitle">
   </div>

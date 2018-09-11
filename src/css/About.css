@@ -1,4 +1,4 @@
-.about{
+.about {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -26,7 +26,7 @@
 }
 
 .about img {
-  width: 70%;
+  width: 800px;
   align-self: center;
 }
 
@@ -34,10 +34,12 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: baseline;
   justify-content: space-between;
 }
 
 .about ul.icons {
+  width: 20%;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -52,3 +54,81 @@ ul.icons .fa-facebook-square:hover {color:#3b5998}
 ul.icons .fa-instagram:hover {color:#c32aa3}
 ul.icons .fa-github:hover {color:#6e5494}
 ul.icons .fa-envelope-open:hover {color:#db4437}
+
+
+@media screen and (max-width: 850px) {
+  .about img {
+    width: 700px;
+  }
+
+  .about ul.icons {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about img {
+    width: 400px;
+    align-self: center;
+  }
+
+  .about .container {
+    width: 90%;
+  }
+
+  .about h1 {
+    font-size: 1.5rem;
+  }
+
+  ul li {
+    font-size: .8rem;
+  }
+
+  .about .fa-3x {
+    font-size: 2rem;
+  }
+
+  .about .row {
+    width: 90%;
+  }
+
+  .about ul.icons li {
+    margin: 0 .5rem;
+  }
+
+  .about p {
+    font-size: .8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about img {
+    width: 350px;
+    align-self: center;
+  }
+
+  .about .container {
+    width: 90%;
+  }
+
+  .about h1 {
+    font-size: 1.5rem;
+  }
+
+  ul li {
+    font-size: .8rem;
+  }
+
+  .about .fa-3x {
+    font-size: 2rem;
+  }
+
+  ul.icons li {
+    margin: 0 .7rem;
+  }
+
+  .about p {
+    font-size: .8rem;
+  }
+}
+

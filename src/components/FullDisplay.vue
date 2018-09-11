@@ -2,8 +2,8 @@
   <transition name="fadeIn">
   <div class="fullDisplay" v-if="showFullDisplay" :class="{lockScroll: showFullDisplay}">
     <div class="displayNav">
-      <p class="like"><span @click="like(item.i)" class="fa-heart" :class="{far: !item.isLiked, fas: item.isLiked, red: item.isLiked}"></span>
-        {{ item.likes }}</p>
+      <!--<p class="like"><span @click="like(item.i)" class="fa-heart" :class="{far: !item.isLiked, fas: item.isLiked, red: item.isLiked}"></span>-->
+        <!--{{ item.likes }}</p>-->
       <div class="navButtons">
         <span @click="prevItem()" class="fas fa-chevron-left"></span>
         <span @click="nextItem()" class="fas fa-chevron-right"></span>
@@ -11,7 +11,8 @@
       </div>
     </div>
     <h2>{{item.title}}</h2>
-    <img :src="item.src">
+    <p class="description">{{item.description}}</p>
+    <div class="imgContainer" :style="{backgroundImage: 'url(\'' + item.src + '\')' }"></div>
   </div>
   </transition>
 </template>
@@ -46,13 +47,13 @@
         document.body.classList.add("overflowHidden");
       },
       nextItem() {
-        if (this.item.i + 1 < this.images.length) {
-          this.openFullDisplay(this.item.i + 1);
+        if (this.item.i - 1 >= 0) {
+          this.openFullDisplay(this.item.i - 1);
         }
       },
       prevItem() {
-        if (this.item.i - 1 >= 0) {
-          this.openFullDisplay(this.item.i - 1);
+        if (this.item.i + 1 < this.images.length) {
+          this.openFullDisplay(this.item.i + 1);
         }
       },
       closeFullDisplay() {

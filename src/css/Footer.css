@@ -11,3 +11,9 @@
   font-family: 'Source Code Pro', sans-serif;
   font-size: .9rem;
 }
+
+@media screen and (max-width: 767px) {
+  .footer {
+    font-size: .7rem;
+  }
+}

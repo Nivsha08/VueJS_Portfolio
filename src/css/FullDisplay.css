@@ -29,7 +29,8 @@
   padding: 2rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -39,15 +40,45 @@
 
 h2 {
   font-size: 2rem;
+  margin: 0;
 }
 
-.fullDisplay img {
-  max-width: 80%;
-  border-radius: 10px;
+p.description {
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 1.4rem;
+  margin: 1rem 0 3rem 0;
+  text-align: center;
+}
+
+.fullDisplay .imgContainer {
+  width: 70%;
+  height: 70%;
+  max-height: 70%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .red {
+  animation: liked .2s 0s forwards ease-out;
   color: #d63031;
+}
+
+@keyframes liked {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .scrollLock {
@@ -56,4 +87,31 @@ h2 {
 
 .overflowHidden {
   overflow: hidden;
+}
+
+@media screen and (max-width: 1440px) {
+  .fullDisplay .imgContainer {
+    height: 60%;
+    max-height: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fullDisplay .imgContainer {
+    width: 90%;
+    height: 90%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p.description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
 }

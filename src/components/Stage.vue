@@ -39,4 +39,10 @@
   .stage {
     margin-top: 120px;
   }
+
+  @media screen and (max-width: 850px) {
+    .stage {
+      margin-top: 155px;
+    }
+  }
 </style>
