@@ -3,7 +3,7 @@
     <div @click="openItem" class="overlay">
       <h2>{{ itemTitle }}</h2>
       <p class="description">{{ itemDescription }}</p>
-      <!--<p class="like"><span @click="like($event, id)" class="fa-heart" :class="{far: !isLiked, fas: isLiked, red: isLiked}"></span> {{ likes }}</p>-->
+      <p class="like"><span @click="like($event, id)" class="fa-heart" :class="{far: !isLiked, fas: isLiked, red: isLiked}"></span> {{ likes }}</p>
     </div>
     <img :src="source" :title="itemTitle">
   </div>
@@ -18,20 +18,19 @@
         id: this.image.i,
         source: this.image.src,
         itemTitle: this.image.title,
-        itemDescription: this.image.description
+        itemDescription: this.image.description,
+        isLiked: false
       }
     },
     computed: {
       likes: function() {
         return this.image.likes;
-      },
-      isLiked: function() {
-        return this.image.isLiked;
       }
     },
     methods: {
       like($event, i) {
         event.stopPropagation();
+        this.isLiked = !this.isLiked;
         EventBus.$emit('like', i);
       },
       openItem() {

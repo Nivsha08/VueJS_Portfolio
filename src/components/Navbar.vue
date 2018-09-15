@@ -32,7 +32,7 @@
       changeView(n) {
         EventBus.$emit('stageChange', n);
       }
-    }
+    },
   }
 </script>
 

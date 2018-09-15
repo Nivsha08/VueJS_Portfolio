@@ -12,19 +12,12 @@
   import Item from './Item.vue';
   import FullDisplay from './FullDisplay.vue';
   import EventBus from '../js/eventBus.js';
-  import itemsJson from '../assets/items.json';
 
-  itemsJson.reverse();
-
-  export default {
+export default {
     data() {
       return {
         fullDisplayItem: 0,
-      }
-    },
-    computed: {
-      images() {
-        return itemsJson;
+        images: []
       }
     },
     components: {
@@ -44,9 +37,22 @@
           v.likes--;
           v.isLiked = !v.isLiked;
         }
+        this.updateImages();
+      },
+      fetchImages() {
+        console.log("here");
+        this.$http.get('https://nivsha-portfolio.firebaseio.com/images.json')
+          .then(response => response.json())
+          .then(data => {
+            this.images = data;
+          });
+      },
+      updateImages() {
+        this.$http.put('https://nivsha-portfolio.firebaseio.com/images.json', this.images);
       }
     },
     mounted() {
+      this.fetchImages();
       EventBus.$on('like', function(data) {
         this.like(data);
       }.bind(this));

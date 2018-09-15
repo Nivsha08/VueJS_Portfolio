@@ -14,6 +14,7 @@
   import Portfolio from './Portfolio.vue';
   import About from './About.vue';
   import Loader from './Loader.vue';
+  import EventBus from '../js/eventBus';
 
   export default {
     computed: {
